@@ -1,9 +1,9 @@
 //importing cjs module--
-const {PORT}=require('./config/severConfig');
+const {port}=require('./config/severConfig');
 const express=require("express")
 const bodyParser=require('body-parser')
 
-
+console.log(port);
 const startAndSetupServer= async()=>{
 
     //setting bup express object
@@ -16,9 +16,9 @@ const startAndSetupServer= async()=>{
     app.use(bodyParser.urlencoded({extended:true}));
 
     
-    app.listen(PORT,()=>{
+    app.listen(port,()=>{
        // console.log(process.env);
-        console.log(`Server is running on port ${PORT}`);
+        console.log(`Server is running on port ${port}`);
       //  console.log(process.env.PORT);
     });
 }
